@@ -1,0 +1,140 @@
+*,
+li,
+ul,
+::before,
+::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    list-style-type: none;
+}
+
+
+/*Banner Part Start*/
+#dashboard{
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("/img/about.jpg")  top center / cover;
+    text-align: center;
+}
+
+#dashboard a{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+    margin: 60px 90px 50px 100px;
+}
+
+
+/* Footer Part Start  */
+#footer {
+    overflow: hidden;
+    background: black;
+    font-size: 14px;
+    color: #fff;
+    padding: 0px 0px 30px 0px;
+}
+#footer .social_links {
+    margin-left: -5px;
+}
+#footer .social_links a {
+    margin: 0 3px;
+    border-radius: 4px;
+    width: 36px;
+    height: 36px;
+    background: #292929;
+    color: #fff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer .social_links a:hover {
+    color: #151515;
+    background: #ffc451;
+}
+#footer h3 {
+    margin-top: 40px;
+    font-size: 28px;
+    font-family: "Raleway", sans-serif;
+}
+#footer p {
+    font-family: "Raleway", sans-serif;
+}
+#footer .footer-top {
+    background: #151515;
+    border-bottom: 1px solid #222222;
+    padding: 45px 0 45px 0;
+}
+#footer .usefulService p,
+h4 {
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+    color: #fff;
+    padding-bottom: 12px;
+}
+#footer .usefulService a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    color: #fff;
+    line-height: 2;
+    text-decoration: none;
+}
+#footer .icon_right {
+    color: #ffc451;
+}
+#footer .usefulService a:hover {
+    color: #ffc451;
+}
+#footer form {
+    margin-top: 30px;
+    background: #fff;
+    padding: 6px 10px;
+    position: relative;
+    border-radius: 4px;
+}
+#footer .footer-top form {
+    margin-top: 30px;
+    background: #fff;
+    padding: 6px 10px;
+    position: relative;
+    border-radius: 4px;
+}
+#footer .footer-top form input[type="email"] {
+    border: 0;
+    padding: 4px;
+    color: black;
+}
+#footer .footer-top form input[type="submit"] {
+    position: absolute;
+    top: 0;
+    right: -2px;
+    bottom: 0;
+    border: 0;
+    padding: 0 20px;
+    background: #ffc451;
+    color: #151515;
+    border-radius: 0 4px 4px 0;
+}
+#footer .copyright {
+    text-align: center;
+    padding-top: 30px;
+}
+#footer .credits {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+}
+#footer .credits a {
+    color: #ffc451;
+}
+#footer .credits a:hover {
+    color: #ffde9e;
+}
+/* Footer Part End  */

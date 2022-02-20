@@ -1,0 +1,331 @@
+*,
+li,
+ul,
+::before,
+::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    list-style-type: none;
+}
+
+
+/* Navbar part Start  */
+
+#header {
+    border-bottom: 1px solid rgba(12, 11, 9, 0.6);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    z-index: 997;
+}
+
+#header a {
+    text-decoration: none;
+}
+
+#header .logo {
+    font-size: 28px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+}
+
+#header .logo a {
+    color: #fff;
+}
+
+.book-a-table-btn:hover {
+    background: #cda45e;
+    color: #fff;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    list-style-type: none;
+}
+
+.navbar li {
+    list-style-type: none;
+    position: relative;
+    margin-top: 20px;
+}
+
+.navbar a,
+.navbar a:focus {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 10px 0 10px 30px;
+    color: #fff;
+    white-space: nowrap;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.navbar a i,
+.navbar a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover > a {
+    color: #ffc451;
+}
+
+.navbar .dropdown ul {
+    display: block;
+    position: absolute;
+    left: 14px;
+    opacity: 0;
+    visibility: hidden;
+    background: #fff;
+    transition: 0.3s;
+}
+
+.navbar .dropdown ul li {
+    min-width: 200px;
+}
+.navbar ul li a {
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    color: #fff;
+}
+
+
+
+
+
+#header .btn {
+    color: #fff;
+    border: 2px solid #ffc451;
+    margin: 5px 5px;
+}
+
+#header .btn:hover {
+    background-color: #ffc451;
+    color: #151515;
+}
+
+/* Navbar part End  */
+
+
+/*Banner Part Start*/
+#banner {
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("/img/hero-bg.jpg")  top center / cover;
+    text-align: center;
+}
+
+/* Banner Part End  */
+
+
+/* Footer Part Start  */
+#footer {
+    overflow: hidden;
+    background: black;
+    font-size: 14px;
+    color: #fff;
+    padding: 0px 0px 30px 0px;
+}
+#footer .social_links {
+    margin-left: -5px;
+}
+#footer .social_links a {
+    margin: 0 3px;
+    border-radius: 4px;
+    width: 36px;
+    height: 36px;
+    background: #292929;
+    color: #fff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer .social_links a:hover {
+    color: #151515;
+    background: #ffc451;
+}
+#footer h3 {
+    margin-top: 40px;
+    font-size: 28px;
+    font-family: "Raleway", sans-serif;
+}
+#footer p {
+    font-family: "Raleway", sans-serif;
+}
+#footer .footer-top {
+    background: #151515;
+    border-bottom: 1px solid #222222;
+    padding: 45px 0 45px 0;
+}
+#footer .usefulService p,
+h4 {
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+    color: #fff;
+    padding-bottom: 12px;
+}
+#footer .usefulService a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    color: #fff;
+    line-height: 2;
+    text-decoration: none;
+}
+#footer .icon_right {
+    color: #ffc451;
+}
+#footer .usefulService a:hover {
+    color: #ffc451;
+}
+#footer form {
+    margin-top: 30px;
+    background: #fff;
+    padding: 6px 10px;
+    position: relative;
+    border-radius: 4px;
+}
+#footer .footer-top form {
+    margin-top: 30px;
+    background: #fff;
+    padding: 6px 10px;
+    position: relative;
+    border-radius: 4px;
+}
+#footer .footer-top form input[type="email"] {
+    border: 0;
+    padding: 4px;
+    color: black;
+}
+#footer .footer-top form input[type="submit"] {
+    position: absolute;
+    top: 0;
+    right: -2px;
+    bottom: 0;
+    border: 0;
+    padding: 0 20px;
+    background: #ffc451;
+    color: #151515;
+    border-radius: 0 4px 4px 0;
+}
+#footer .copyright {
+    text-align: center;
+    padding-top: 30px;
+}
+#footer .credits {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+}
+#footer .credits a {
+    color: #ffc451;
+}
+#footer .credits a:hover {
+    color: #ffde9e;
+}
+/* Footer Part End  */
+
+/* LogIn Part Start */
+
+.model {
+    display: table; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    overflow: auto; /* Enable scroll if needed */
+    margin: 0px -80px;
+    padding: 90px 425px 20px 425px;
+    width: 100%;
+    height: 100%;
+}
+
+input[type=text], input[type=password],input[type=email] {
+    width: 70%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    margin: 10px auto;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: bold;
+}
+button {
+    border-radius: 5px;
+    color: red;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 10px 30px;
+    border: none;
+    transition: 0.5s ease-in-out;
+    margin: 25px;
+    font-weight: bold;
+}
+button:hover {
+    color: #151515;
+    background: #00ffff;
+}
+
+.containers {
+    padding: 16px;
+    background: #000;
+    box-shadow: 0 8px 32px 0 rgb(0 0 135 / 37%);
+}
+.containers h2{
+    color: #ffffff;
+    font-size: 35px;
+    font-width: bold;
+}
+.containers label{
+    color: #ffffff;
+    font-size: 18px;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/*Log In Part End */
