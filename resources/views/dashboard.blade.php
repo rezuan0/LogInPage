@@ -47,8 +47,24 @@
 <section id="dashboard" >
     <div class="margin-top">
         <div class="container">
-{{--            <a href="logout.php">Logout</a> --}}
-            <a href="/">Logout</a>
+            {{--<a href="logout.php">Logout</a>
+            <a href="/">Logout</a>--}}
+            <h2>Welcome to Dashboard</h2>
+            <hr>
+            <table class="table">
+                <thead>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Action</th>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>{{$data->fullName}}</td>l
+                    <td>{{$data->email}}</td>
+                    <td><a href="/userLogOut">LogOut</a></td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </div>
     </div>

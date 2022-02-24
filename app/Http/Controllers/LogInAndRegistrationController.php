@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Account;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 
 class LogInAndRegistrationController extends Controller
 {
@@ -54,13 +55,32 @@ class LogInAndRegistrationController extends Controller
 
         if($users){
             if(Hash::check($request->password, $users->password)){
-                return view('dashboard');
+                $request->session()->put('logIn', $users->id);
+                return redirect('dashboard');
             }else{
-                echo "wrong Pass----";
+                return back()->with('fail', 'Wrong Password !!!');
             }
         }else{
-            echo "This email is not registered !!!";
+            return back()->with('fail', 'Email not registered!!!');
         }
+    }
+
+
+    public function dashboard(){
+        $data = array();
+        if(Session::has('logIn')){
+            $data = Account::where('id', '=', Session::get('logIn'))->first();
+        }
+        return view('dashboard', compact('data'));
+    }
+
+
+    public function userLogOut(){;
+        if(Session::has('logIn')){
+            Session::pull('logIn');
+            return redirect('/');
+        }
+
     }
 
 }

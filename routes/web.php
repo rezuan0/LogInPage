@@ -10,13 +10,17 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[HomeController::class,'goToHomePages']);
 
-Route::get('/logInPage',[LogInAndRegistrationController::class,'goToLogInPage']);
+Route::get('/logInPage',[LogInAndRegistrationController::class,'goToLogInPage'])
+    ->middleware('alreadyLoggedIn');
 Route::get('/registration',[LogInAndRegistrationController::class,'goToRegistrationPage']);
 
 
 
 Route::post('/userRegi',[LogInAndRegistrationController::class,'userRegistered']);
 Route::post('/logInUser',[LogInAndRegistrationController::class,'userLogIn']);
+Route::get('/dashboard',[LogInAndRegistrationController::class,'dashboard'])
+    ->middleware('isLoggedIn');
+Route::get('/userLogOut',[LogInAndRegistrationController::class,'userLogOut']);
 
 
 
