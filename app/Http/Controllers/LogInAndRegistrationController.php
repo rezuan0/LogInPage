@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 
+
 class LogInAndRegistrationController extends Controller
 {
 
@@ -20,6 +21,7 @@ class LogInAndRegistrationController extends Controller
 
 
 
+    /* Register a new user */
     public function userRegistered(Request $request){
         $request->validate([
             'name' => 'required|string|min:1|max:100',
@@ -32,19 +34,25 @@ class LogInAndRegistrationController extends Controller
 
         $user->fullName=$request->name;
         $user->email=$request->email;
-/*        $user->password=$request->pass;
-        $user->cPassword=$request->conPass;*/
         $user->password=Hash::make($request->pass);
         $user->cPassword=Hash::make($request->conPass);
 
-        $user->save();
-//        return view('logInPage');
-        echo "Account Create Successfully";
-
-
+        if($request->password == $request->cPassword){
+            $user->save();
+            echo '<script>window.confirm("Account create Successfully");</script>';
+            return view('logInPage');
+        }
+        else{
+            echo '<script>window.alert("Wrong Pass");</script>';
+            return view('registration');
+        }
         //return view('newAcSuccessful',['name'=>$uName]);*/
     }
 
+
+
+
+    /* Log in a user */
     public function userLogIn(Request $request){
         $request->validate([
             'email' => 'required',
@@ -66,6 +74,7 @@ class LogInAndRegistrationController extends Controller
     }
 
 
+    /* MiddleWare */
     public function dashboard(){
         $data = array();
         if(Session::has('logIn')){
@@ -74,7 +83,7 @@ class LogInAndRegistrationController extends Controller
         return view('dashboard', compact('data'));
     }
 
-
+/* log Out a User */
     public function userLogOut(){;
         if(Session::has('logIn')){
             Session::pull('logIn');
@@ -83,4 +92,7 @@ class LogInAndRegistrationController extends Controller
 
     }
 
+
 }
+
+
